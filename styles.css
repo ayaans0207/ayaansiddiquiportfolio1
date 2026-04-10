@@ -465,6 +465,27 @@ footer p {
   padding: 0 5vw 50px;
 }
 
+.robot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.robot-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+}
+
+@media (max-width: 700px) {
+  .robot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .video-box {
   width: 100%;
   aspect-ratio: 16 / 9;
