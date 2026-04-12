@@ -657,13 +657,27 @@ footer p {
   gap: 14px;
 }
 
+.gokart-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* IMPORTANT PART */
 .gokart-grid img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;   /* forces equal box size */
+  object-fit: cover;     /* fills nicely */
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--bg3);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .gokart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 700px) {
